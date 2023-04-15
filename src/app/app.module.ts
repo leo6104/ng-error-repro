@@ -1,24 +1,25 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Cmp1Component } from '../cmp1/cmp1.component';
 import { Cmp2Component } from '../cmp2/cmp2.component';
-import { Cmp3Component } from '../cmp3/cmp3.component';
+import { LetDirective } from '../ng-let.directive';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     Cmp1Component,
     Cmp2Component,
-    Cmp3Component
+    LetDirective,
   ],
-  providers: [],
+  providers: [
+    provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
