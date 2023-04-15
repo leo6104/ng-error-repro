@@ -1,4 +1,4 @@
-<ng-container *ngLet="{} as d">
+<ng-container *ngIf="{} as d">
   <cmp-1 />
   <router-outlet />
 </ng-container>
@@ -10,7 +10,7 @@
 <!--<ng-template #fabWrapperContainer />-->
 
 <!-- With this markup, no error -->
-<!--<ng-container *ngLet="{} as d">-->
+<!--<ng-container *ngIf="{} as d">-->
 <!--  <cmp-1 />-->
 <!--  <router-outlet />-->
 <!--</ng-container>-->

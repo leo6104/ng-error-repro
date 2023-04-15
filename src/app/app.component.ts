@@ -1,5 +1,5 @@
 import { Component, ViewChild, ViewContainerRef } from '@angular/core';
-import { Cmp2Component } from '../cmp2/cmp2.component';
+import { Cmp3Component } from '../cmp3/cmp3.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,6 @@ export class AppComponent {
   title = 'my-universal-app';
 
   ngAfterViewInit() {
-    this.fabContainer.createComponent(Cmp2Component);
+    this.fabContainer.createComponent(Cmp3Component);
   }
 }

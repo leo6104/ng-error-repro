@@ -1,0 +1,7 @@
+<h1>component 3</h1>
+
+<ng-container *ngIf="request$ | async as request">
+  <div *ngFor="let data of request.data">
+    {{data | json}}
+  </div>
+</ng-container>
