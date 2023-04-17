@@ -1,5 +1,6 @@
-import { Component, ViewChild, ViewContainerRef } from '@angular/core';
-import { Cmp3Component } from '../cmp3/cmp3.component';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
+import { of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,17 @@ import { Cmp3Component } from '../cmp3/cmp3.component';
   styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
-  @ViewChild('fabWrapperContainer', { read: ViewContainerRef }) fabContainer: ViewContainerRef;
+  test: string = isPlatformServer(this.platformId) ? 'server' : 'client';
+  test$ = of('test').pipe(
+    tap((t) => this.test = t),
+  )
 
-  title = 'my-universal-app';
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: string,
+  ) {
+  }
 
-  ngAfterViewInit() {
-    this.fabContainer.createComponent(Cmp3Component);
+  ngOnInit() {
+    this.test$.subscribe();
   }
 }
