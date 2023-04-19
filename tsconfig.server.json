@@ -11,8 +11,4 @@
     "src/main.server.ts",
     "server.ts"
   ],
-  "angularCompilerOptions": {
-    "enableIvy": true,
-    "preserveWhitespaces": false
-  }
 }

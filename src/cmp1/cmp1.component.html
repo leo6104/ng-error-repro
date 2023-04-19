@@ -1,7 +1,7 @@
-<h1>component 1</h1>
-<ng-container *ngIf="request$ | async as request">
-  <div *ngFor="let data of request.data">
-    {{data | json}}
+<ng-container *ngIf="!loading">
+  <ng-content select="[left]"></ng-content>
+  <div class="title">
+    <ng-content select="mp-icon[right]"></ng-content>
   </div>
+  <ng-content select="[adornment]"></ng-content>
 </ng-container>
-<ng-content></ng-content>
