@@ -1,7 +1,4 @@
-<h1>component 2</h1>
-
-<ng-container *ngIf="request$ | async as request">
-  <div *ngFor="let data of request.data">
-    {{data | json}}
-  </div>
+<ng-container *ngIf="label">
+  <ng-content select="[left]"></ng-content>
+  <span *ngIf="!link">{{ label }}</span>
 </ng-container>

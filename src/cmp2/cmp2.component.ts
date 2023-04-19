@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'cmp-2',
@@ -8,15 +8,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   standalone: true,
   imports: [
     CommonModule,
-    HttpClientModule
+    RouterModule,
   ]
 })
 export class Cmp2Component {
-  request$ = this.http.get<{ data: any[]}>('https://reqres.in/api/users');
-
-  constructor(
-    private http: HttpClient,
-  ) {
-  }
-
+  label: string = 'test';
+  link: string[];
 }
