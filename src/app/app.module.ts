@@ -16,7 +16,6 @@ import { Cmp3Component } from '../cmp3/cmp3.component';
     Cmp2Component,
     Cmp3Component,
     LetDirective,
-    ContextTag,
   ],
   providers: [
     provideClientHydration()
