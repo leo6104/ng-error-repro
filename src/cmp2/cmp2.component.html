@@ -1,7 +1,12 @@
 <h1>component 2</h1>
+<ng-container *ngIf="true">
+  <div>
+    partially skipped <ng-conten></ng-conten>
+  </div>
+</ng-container>
 
-<ng-container *ngIf="request$ | async as request">
-  <div *ngFor="let data of request.data">
-    {{data | json}}
+<ng-container *ngIf="false">
+  <div>
+    not loaded
   </div>
 </ng-container>

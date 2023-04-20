@@ -18,7 +18,7 @@
     "@angular/cdk": "^16.0.0-rc.0",
     "@angular/common": "^16.0.0-rc.1",
     "@angular/compiler": "^16.0.0-rc.1",
-    "@angular/core": "^16.0.0-rc.1",
+    "@angular/core": "https://output.circle-artifacts.com/output/job/87ebbc1d-88e4-477e-9c7b-f654c5c9676d/artifacts/0/angular/core-pr49943-7ba01b4ccf.tgz",
     "@angular/forms": "^16.0.0-rc.1",
     "@angular/platform-browser": "^16.0.0-rc.1",
     "@angular/platform-browser-dynamic": "^16.0.0-rc.1",

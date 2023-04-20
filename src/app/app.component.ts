@@ -5,13 +5,13 @@ import { of, tap } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   test: string = isPlatformServer(this.platformId) ? 'server' : 'client';
   test$ = of('test').pipe(
     tap((t) => this.test = t),
-  )
+  );
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: string,
