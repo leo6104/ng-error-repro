@@ -7,9 +7,6 @@ import { LetDirective } from '../ng-let.directive';
 import { Cmp3Component } from '../cmp3/cmp3.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     Cmp1Component,

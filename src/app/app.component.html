@@ -1,10 +1,1 @@
-<a>
-  <ng-container *ngTemplateOutlet="titleTemplate"></ng-container>
-  <ng-content *ngIf="true" select="[adornment]"></ng-content>
-</a>
-
-<ng-template #titleTemplate>
-  <ng-container *ngIf="true">
-    <a>test</a>
-  </ng-container>
-</ng-template>
+{{ t$ | async }}

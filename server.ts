@@ -2,11 +2,11 @@ import 'zone.js/node';
 
 import { APP_BASE_HREF } from '@angular/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
-const express = require('express');
 import { existsSync } from 'fs';
 import { join } from 'path';
+import { AppBootstrap } from './src/main.server';
 
-import { AppServerModule } from './src/main.server';
+const express = require('express');
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
@@ -16,7 +16,7 @@ export function app() {
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
   server.engine('html', ngExpressEngine({
-    bootstrap: AppServerModule,
+    bootstrap: AppBootstrap,
   }));
 
   server.set('view engine', 'html');
